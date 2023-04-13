@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    hr {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <form>
+      <hr />
+      <div>
+        <label for="first-name">First name:</label>
+        <input id="first-name" type="text" />
+      </div>
+      <div>
+        <label for="second-name">Last name:</label>
+        <input id="second-name" type="text" />
+      </div>
+      <hr />
+      <div>
+        <button>Button tag</button>
+        <input type="button" value="Input tag button type" />
+      </div>
+      <hr />
+      <select>
+        <option value="japan">Japan</option>
+        <option value="ukraine">Ukraine</option>
+      </select>
+      <hr />
+      <div>
+        <input type="radio" id="male" name="gender" />
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="gender" />
+        <label for="male">Female</label>
+      </div>
+      <hr />
+      <div>
+        <input type="checkbox" id="bike" /><label for="bike"
+          >I have a bike</label
+        >
+      </div>
+      <div>
+        <input type="checkbox" id="bike" /><label for="bike"
+          >I have a car</label
+        >
+      </div>
+      <hr />
+    </form>
+  </body>
+</html>

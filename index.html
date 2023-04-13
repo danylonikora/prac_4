@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <style>
+      /* Підключаємо шрифти */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+      /* Відключаємо стандарнту стилізацію елементів браузерів за допомогую reset.css */
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      b {
+        font-weight: 600;
+      }
+
+      body {
+        margin-top: 32px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        width: 596px;
+        height: 700px;
+        margin: 0 auto;
+        gap: 24px;
+        padding: 8px;
+
+        font-family: Inter;
+        font-size: 12px;
+        border: 1px solid black;
+      }
+
+      .aside {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .aside_subheading {
+        font-size: 14px;
+      }
+
+      .aside_paragraph,
+      .aside_text,
+      .aside_subheading {
+        color: #4f4f4f;
+      }
+
+      .avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        align-self: center;
+      }
+
+      .name-and-position {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-self: center;
+      }
+
+      .name {
+        font-size: 20px;
+      }
+
+      .position {
+        font-size: 16px;
+      }
+
+      .icon {
+        height: 16px;
+      }
+
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact_icon {
+        color: #4f4f4f;
+      }
+
+      .contact_icon-container {
+        width: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .aside_list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .section_subheading {
+        font-size: 16px;
+      }
+
+      .experience {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .experience_position,
+      .experience_location {
+        font-size: 14px;
+      }
+
+      .experience_period {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .i-can-do {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <img src="./avatar.jpg" alt="Avatar" class="avatar" />
+        <div class="name-and-position">
+          <span class="name"><b>Danylo Nikora</b></span>
+          <span class="position">Front End Developer</span>
+        </div>
+        <h2 class="aside_subheading"><b>Personal Information</b></h2>
+        <ul class="contacts aside_list">
+          <li class="contact">
+            <div class="contact_icon-container">
+              <img src="./phone.png" alt="Location" class="icon contact_icon" />
+            </div>
+            <span class="aside_text">+380 (63) 777 40 04</span>
+          </li>
+          <li class="contact">
+            <div class="contact_icon-container">
+              <img src="./mail.png" alt="Location" class="icon contact_icon" />
+            </div>
+            <span class="aside_text">danylonikora@gmail.com</span>
+          </li>
+
+          <li class="contact">
+            <div class="contact_icon-container">
+              <img
+                src="./location.png"
+                alt="Location"
+                class="icon contact_icon"
+              />
+            </div>
+            <span class="aside_text">Ukraine, Kyiv</span>
+          </li>
+        </ul>
+        <h2 class="aside_subheading"><b>Languages</b></h2>
+        <ul class="languages aside_list">
+          <li class="language">
+            <span class="aside_text">Ukrainian (native)</span>
+          </li>
+          <li class="language">
+            <span class="aside_text">Russian (native)</span>
+          </li>
+          <li class="language">
+            <span class="aside_text">English (advanced)</span>
+          </li>
+          <li class="language">
+            <span class="aside_text">German (beginning)</span>
+          </li>
+        </ul>
+        <h2 class="aside_subheading"><b>Skills</b></h2>
+        <p class="aside_paragraph">
+          HTML, CSS, SCSS, JavaScript, TypeScript, React, Next.js, Node.js,
+          Jest, GIT
+        </p>
+      </aside>
+      <section class="section">
+        <h2 class="section_subheading">
+          <u><b>Education</b></u>
+        </h2>
+        <div class="experience">
+          <p class="experience_position">
+            Bachelor of Hotel & Restaurant Management
+          </p>
+          <b class="experience_location"
+            >State University of Trade and Economics</b
+          >
+          <div class="experience_period">
+            <img src="./calendar.png" alt="Calendar" class="icon" />
+            <span class="experience_period-date">2019 - 2023</span>
+          </div>
+        </div>
+        <h2 class="section_subheading">
+          <u><b>Experience</b></u>
+        </h2>
+        <div class="experience">
+          <p class="experience_position">Student</p>
+          <p class="experience_description">
+            Studied programming basics including C, JavaScript, algorithms, data
+            structures, design patters, then more focused skills on web
+            programming.
+          </p>
+          <b class="experience_location">EPAM University</b>
+          <div class="experience_period">
+            <img src="./calendar.png" alt="Calendar" class="icon" />
+            <span class="experience_period-date"
+              >September 2019 - June 2020</span
+            >
+          </div>
+        </div>
+        <div class="experience">
+          <p class="experience_position">Trainee Front End Developer</p>
+          <p class="experience_description">
+            Worked on project in restaurant area that supposed to propose
+            delivery services (B2B2C). Code refactoring, fixing minor bugs using
+            Jira, implementing Figma templates.
+          </p>
+          <b class="experience_location">EPAM Ukraine</b>
+          <div class="experience_period">
+            <img src="./calendar.png" alt="Calendar" class="icon" />
+            <span class="experience_period-date">June 2020 - August 2020</span>
+          </div>
+        </div>
+        <div class="experience">
+          <p class="experience_position">Junior Front End Developer</p>
+          <p class="experience_description">
+            Big car auction in USA (Copart). Fetch requests to server, data
+            change visualisation, wrote unit and integration tests, implemented
+            a lot of logic that displays information.
+          </p>
+          <b class="experience_location">EPAM Ukraine</b>
+          <div class="experience_period">
+            <img src="./calendar.png" alt="Calendar" class="icon" />
+            <span class="experience_period-date"
+              >August 2020 - February 2021</span
+            >
+          </div>
+        </div>
+        <div class="experience">
+          <p class="experience_position">Middle Front End Developer</p>
+          <p class="experience_description">
+            Software that provides complete range of functionalities for big
+            hotel chain. Responsible for maintenance and development of CMS
+            system.
+          </p>
+          <b class="experience_location">EPAM Ukraine</b>
+          <div class="experience_period">
+            <img src="./calendar.png" alt="Calendar" class="icon" />
+            <span class="experience_period-date">February 2021 - present</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="i-can-do">
+      <h2 class="i-can-do_heading">Я вмію зробити:</h2>
+      <ul>
+        <li><a href="./list.html">Список</a></li>
+        <li><a href="./table.html">Таблицю</a></li>
+        <li><a href="./form.html">Форму</a></li>
+        <li><a href="./presentation.html">Презентацію</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
