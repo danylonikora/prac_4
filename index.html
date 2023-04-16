@@ -9,7 +9,8 @@
       /* Підключаємо шрифти */
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
-      /* Відключаємо стандарнту стилізацію елементів браузерів за допомогую reset.css */
+      /* Скидання стилів елементів за замовчуванням */
+      /* Використовуємо reset.css */
       html,
       body,
       div,
@@ -98,7 +99,8 @@
         font: inherit;
         vertical-align: baseline;
       }
-      /* HTML5 display-role reset for older browsers */
+
+      /* Відображення нових елементів HTML5 у старих браузерах */
       article,
       aside,
       details,
@@ -112,14 +114,20 @@
       section {
         display: block;
       }
+
+      /* Відключення маркерів списків */
       ol,
       ul {
         list-style: none;
       }
+
+      /* Відключення лапок у цитатах */
       blockquote,
       q {
         quotes: none;
       }
+
+      /* Відключення лапок у цитатах перед і після тексту */
       blockquote:before,
       blockquote:after,
       q:before,
@@ -127,23 +135,29 @@
         content: "";
         content: none;
       }
+
+      /* Встановлення параметрів таблиць */
       table {
         border-collapse: collapse;
         border-spacing: 0;
       }
 
+      /* Налаштування товщини шрифту для елементу <b> */
       b {
         font-weight: 600;
       }
 
+      /* Налаштування верхнього відступу для <body> */
       body {
         margin-top: 32px;
       }
 
+      /* Налаштування поведінки властивостей padding та margin для всіх елементів */
       * {
         box-sizing: border-box;
       }
 
+      /* Стилізація контейнеру для резюме, встановлення шрифту Inter */
       .container {
         display: flex;
         width: 596px;
@@ -157,22 +171,29 @@
         border: 1px solid black;
       }
 
+      /* Боковий блок з короткою інформацією про себе */
       .aside {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
+      /* Підзаголовки бокового блоку */
       .aside_subheading {
         font-size: 14px;
       }
 
+      /* Параграфи, текст та підзаголовки що будуть належати до бокового блоку */
       .aside_paragraph,
       .aside_text,
-      .aside_subheading {
+      .aside_subheading,
+      .aside_link,
+      .aside_link:visited,
+      .aside_link:link {
         color: #4f4f4f;
       }
 
+      /*Фото в резюме */
       .avatar {
         height: 100px;
         width: 100px;
@@ -180,6 +201,7 @@
         align-self: center;
       }
 
+      /* Контейнер що містить в собі ім'я та посаду */
       .name-and-position {
         display: flex;
         flex-direction: column;
@@ -187,69 +209,77 @@
         align-self: center;
       }
 
+      /* Текст з ім'ям */
       .name {
         font-size: 20px;
       }
 
+      /* Текст з посадою */
       .position {
         font-size: 16px;
       }
 
+      /* Іконки */
       .icon {
         height: 16px;
       }
 
+      /* Контейнери які містять іконку та текст */
       .contact {
         display: flex;
         align-items: center;
         gap: 8px;
       }
 
+      /* Іконка контакту (телефон, локація, пошта) */
       .contact_icon {
         color: #4f4f4f;
       }
 
+      /* Контейнер що містить в собі іконку контакту */
       .contact_icon-container {
         width: 20px;
         display: flex;
         justify-content: center;
       }
 
+      /* Елемент списку боковогу блоку */
       .aside_list {
         display: flex;
         flex-direction: column;
         gap: 8px;
       }
 
+      /* Основний блок з інформацією про освіту та досвід */
       .section {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
+      /* Заголовки блоку про основного блоку */
       .section_subheading {
         font-size: 16px;
       }
 
+      /* Контейнер який буде містити інформацію про досвід або освіту  */
       .experience {
         display: flex;
         flex-direction: column;
         gap: 8px;
       }
 
+      /* Оформлення тексту про позицію на роботі та місце роботи */
       .experience_position,
       .experience_location {
         font-size: 14px;
       }
 
+      /* Контейнер що містить картинку з календариком та періодом отримання досвіду (освіти) */
       .experience_period {
         display: flex;
         gap: 8px;
         align-items: center;
-      }
-
-      .i-can-do {
-        margin-top: 30px;
       }
     </style>
   </head>
@@ -307,6 +337,15 @@
           HTML, CSS, SCSS, JavaScript, TypeScript, React, Next.js, Node.js,
           Jest, GIT
         </p>
+        <h2 class="aside_subheading"><b>I can do</b></h2>
+        <ul class="aside_list">
+          <li><a class="aside_link" href="./list.html">List</a></li>
+          <li><a class="aside_link" href="./table.html">Table</a></li>
+          <li><a class="aside_link" href="./form.html">Form</a></li>
+          <li>
+            <a class="aside_link" href="./presentation.html">Presentation</a>
+          </li>
+        </ul>
       </aside>
       <section class="section">
         <h2 class="section_subheading">
@@ -384,15 +423,6 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class="i-can-do">
-      <h2 class="i-can-do_heading">Я вмію зробити:</h2>
-      <ul>
-        <li><a href="./list.html">Список</a></li>
-        <li><a href="./table.html">Таблицю</a></li>
-        <li><a href="./form.html">Форму</a></li>
-        <li><a href="./presentation.html">Презентацію</a></li>
-      </ul>
     </div>
   </body>
 </html>
